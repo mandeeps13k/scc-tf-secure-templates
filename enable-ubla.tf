@@ -2,7 +2,7 @@
     name          = "image-store.com"
     location      = "EU"
     force_destroy = true
-
+    ## Enforcing Uniform Bucket Level Access
     uniform_bucket_level_access = true
 
     website {
