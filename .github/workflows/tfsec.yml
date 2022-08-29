@@ -15,3 +15,4 @@ jobs:
           tfsec_args: --soft-fail
           github_token: ${{ github.token }}
           soft_fail_commenter: true
+          full_repo_scan: true
