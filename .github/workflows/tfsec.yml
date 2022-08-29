@@ -12,7 +12,7 @@ jobs:
       - name: tfsec
         uses: aquasecurity/tfsec-pr-commenter-action@v1.2.0
         with:
-          tfsec_args: --soft-fail
+          tfsec_args: --soft-fail,--force-all-dirs
           github_token: ${{ github.token }}
           soft_fail_commenter: true
           full_repo_scan: true
