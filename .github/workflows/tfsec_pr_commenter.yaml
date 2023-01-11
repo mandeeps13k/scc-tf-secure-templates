@@ -6,12 +6,17 @@ jobs:
     name: tfsec PR commenter
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: read
+      pull-requests: write
+
     steps:
       - name: Clone repo
         uses: actions/checkout@master
       - name: tfsec
         uses: aquasecurity/tfsec-pr-commenter-action@v1.2.0
         with:
-          tfsec_args: --force-all-dirs
           github_token: ${{ github.token }}
+          tfsec_args: --force-all-dirs
           soft_fail_commenter: true
+          
