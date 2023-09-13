@@ -17,6 +17,8 @@ jobs:
         uses: commercetools/tfsec-pr-commenter-action@v0.1.0
         with:
           tfsec_args: --force-all-dirs
-          github_token: ${{ github.token }}
+          github_token: ${{ secrets.TOKEN }}
           soft_fail_commenter: true
           working_directory: ''
+          
+          
